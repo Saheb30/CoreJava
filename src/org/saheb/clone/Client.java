@@ -9,6 +9,8 @@ public class Client {
 		
 		Employee emp = new Employee(add);
 		Employee emp2 = (Employee) emp.clone(emp);
+		System.out.println("emp->"+emp.hashCode());
+		System.out.println("emp2->"+emp2.hashCode());
 		//System.out.println(emp2.getAddress().getAddress());
 		//emp2.getAddress().setAddress("Magarpatta");
 		
@@ -20,6 +22,9 @@ public class Client {
 		
 		dept.getEmpList().add(emp);
 		System.out.println(dept.getEmpList().size());
+		
+		dept.getEmpList().get(0).getAddress().setAddress("abc");
+		System.out.println(emp.getAddress().getAddress());
 		
 		
 	}

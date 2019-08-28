@@ -14,8 +14,7 @@ public class Calculator {
 		//new Calculator().product(result);
 		calc.product((a,b)->a*b);//lambda
 		calc.product(calc::multiple);//lambda equivalent method reference
-		//In case of lambda we put logic in lambda body itself but in case of 
-		
+		//In case of lambda we put logic in lambda body itself 	
 		
 	}
 	private void product(BiFunction<Integer,Integer,Integer> biFunction) {

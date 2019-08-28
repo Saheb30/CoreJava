@@ -1,6 +1,7 @@
 package org.saheb.stream;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -16,6 +17,7 @@ public class StreamFilter {
 		
 		StreamFilter filter = new StreamFilter();
 		filter.filter(list);
+		filter.sort(list);
 	}
 	private void filter(List<Product> list) {
 		list.stream().filter(a->a.getPrice()>200).collect(Collectors.toList()).forEach(System.out::println);
@@ -37,5 +39,8 @@ public class StreamFilter {
 		
 		Optional<Double> reduceSum = list.stream().map(a->a.getPrice()).reduce((a,b)->a+b);
 		reduceSum.ifPresent(System.out::println);
+	}
+	private void sort(List<Product> list) {
+		list.stream().sorted(Comparator.comparing(Product::getQuantity)).forEach(System.out::println);
 	}
 }

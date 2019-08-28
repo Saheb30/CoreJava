@@ -12,9 +12,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteListTest {
 
 	public static void main(String[] args) {
-		//new CopyOnWriteListTest().testCopyList();
+		new CopyOnWriteListTest().testCopyList();
 		//mapTest();
-		joinerTest();
+		//joinerTest();
 	}
 	 void testCopyList(){
 		List<String> list = new CopyOnWriteArrayList<>();
@@ -28,8 +28,8 @@ public class CopyOnWriteListTest {
 		 while(it.hasNext()){ 
             System.out.println("list is:"+list);
             String str = it.next();
-            System.out.println(str);
-           /* if(str.equals("2")) {
+            System.out.println("Iterator->"+str);
+            if(str.equals("2")) {
             	list.remove("5");
             }
             if(str.equals("3")) {
@@ -37,8 +37,8 @@ public class CopyOnWriteListTest {
             }
             //below code don't throw ConcurrentModificationException because it doesn't change modCount variable of list
             if(str.equals("4")) {
-            	list.set(1, "7");
-            }*/
+            	list.set(1, "7");//here 1 is index
+            }
         }
 	}
 	static void mapTest() {

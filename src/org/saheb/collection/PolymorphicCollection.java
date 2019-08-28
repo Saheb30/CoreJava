@@ -21,7 +21,8 @@ public class PolymorphicCollection {
 		List<Cat> catList = new ArrayList<Cat>();
 		List<Dog> dogList = new ArrayList<Dog>();
 		addAnimals(animalList);
-		//addAnimals(catList);//Will be error
+		//addAnimals(catList);//Will be error. We can apply the sub-super class inheritance concept is ADDING objects to the list 
+								//but not in assigning or passing objects as a method argument.
 		addAnimalsGeneric(catList);
 		//addAnimals(dogList);//Will be error
 		addAnimalsGeneric(dogList);

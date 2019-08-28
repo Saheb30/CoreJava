@@ -1,5 +1,9 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class CreateInstance {
 	public static void main(String[] args)
 			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
@@ -8,6 +12,7 @@ public class CreateInstance {
 		Animal ob3 = (Animal) ob1.clone(ob1);
 		Animal ob4 = (Animal) Class.forName("test.Animal").newInstance();
 		System.out.println("done");
+		List<Integer> list = new ArrayList<>();
 	}
 }
 
