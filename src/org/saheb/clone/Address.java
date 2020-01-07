@@ -1,18 +1,23 @@
 package org.saheb.clone;
 
 public class Address implements Cloneable{
-	String address;
+	String street;
 	long pin;
-	public String getAddress() {
-		return address;
+	public String getStreet() {
+		return street;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setStreet(String street) {
+		this.street = street;
 	}
 	public long getPin() {
 		return pin;
 	}
-	/*public void setPin(long pin) {
+	public void setPin(long pin) {
 		this.pin = pin;
-	}*/
+	}
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+	      return super.clone();
+	 }
+
 }
